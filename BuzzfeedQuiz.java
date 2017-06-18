@@ -16,10 +16,10 @@ public class BuzzfeedQuiz {
 		
 		
 		String monkey = "horseradish";
-		String fish = "Moses Oscar";
+		String fish = "moses oscar";
 		String elephant = monkey;
 		monkey = "heffalump";
-		System.out.println(monkey + 5 + "fish" + 7 + 2 + 5.5 + elephant + "elephant");
+		System.out.println(monkey + 5 + "fish" + 7 + 2.5 + elephant + "elephant");
 		
 		
 		
@@ -54,17 +54,17 @@ public class BuzzfeedQuiz {
 		//////////////////////////
 		
 		
-		int custardCaramelApplesNumber = 0;
+		int number = 0;
 		int time = 6;
 		
 		
 		while (time < 12) {
-			custardCaramelApplesNumber += 5;
+			number += 5;
 			time = time + 1;
 		}
 		
 		for(time = 6; time < 12; time++) {
-			custardCaramelApplesNumber = custardCaramelApplesNumber + 5;
+			number = number + 5;
 		}
 		
 		
@@ -75,16 +75,16 @@ public class BuzzfeedQuiz {
 		
 		
 		
-		int firstNumber = 1;
-		int secondNumber = 1;
+		int var1 = 1;
+		int var2 = 1;
 		int temp;
-		while (secondNumber < 1000000) {
-			temp = secondNumber;
-			secondNumber += firstNumber;
-			firstNumber = temp;
+		while (var2 < 1000000) {
+			temp = var2;
+			var2 += var1;
+			var1 = temp;
 		}
 		
-		System.out.println(secondNumber);
+		System.out.println(var2);
 		
 		
 		
@@ -124,7 +124,7 @@ public class BuzzfeedQuiz {
 		
 		
 		boolean a = true;
-		System.out.println(a ? "mouse" : "mice");
+		System.out.println(a ? "mouse" : "super mouse");
 		
 		
 		
@@ -138,18 +138,15 @@ public class BuzzfeedQuiz {
 			private double x, y;
 			private double lastDist;
 			private boolean running;
-			private AHRS gyro;
+			private AHRS gyro; 
 			private Encoder leftEnc, rightEnc;
 			
 			public DeadReckoning(AHRS gyro, Encoder leftEnc, Encoder rightEnc) {
 				this.gyro = gyro;
 				this.rightEnc = rightEnc;
-				this.leftEnc = leftEnc;
-				new UpdateThread().start();
-			}
+				this.leftEnc = leftEnc;			}
 			
 			public void start() {
-				this.running = true;
 				zero();
 			}
 			
@@ -160,10 +157,6 @@ public class BuzzfeedQuiz {
 				leftEnc.reset();
 				rightEnc.reset();
 				lastDist = 0;
-			}
-			
-			public void stop() {
-				this.running = false;
 			}
 			
 			public double getX() {
