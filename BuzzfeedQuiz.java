@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 import javax.swing.JOptionPane;
 
 public class BuzzfeedQuiz {
@@ -126,6 +128,29 @@ public class BuzzfeedQuiz {
 		boolean a = true;
 		System.out.println(a ? "mouse" : "super mouse");
 		
+		
+		
+		
+		//////////////////////
+		
+		
+		int jester = 21;
+		while (jester > 0) {
+			System.out.println(x);
+			jester /= 2;
+		}
+		
+		
+		
+	   //////////////////////////
+		 
+		ArrayList<Integer> arr;
+		for (int i = 0; i < 20; i++) {
+			if(i % 3 == 0) {
+				arr.add(i);
+			}
+		}
+		System.out.println(arr.size());
 		
 		
 		
